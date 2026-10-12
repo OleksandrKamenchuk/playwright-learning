@@ -1,0 +1,9 @@
+//Concatination and Interpolation
+var price = 80
+var itemName = "table"
+
+var messageToPrint1 = "The price for your "+itemName+" is "+price+" dollars" //Concatination
+var messageToPrint2 = `The price for your ${itemName} is ${price} dollars` //Interpolation
+
+console.log(messageToPrint1)
+console.log(messageToPrint2)
