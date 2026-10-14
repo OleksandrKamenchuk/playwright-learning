@@ -7,6 +7,7 @@ console.log(false || false) //any value should be TRUE for expression to be TRUE
 
 var ageIsMoreThanEighteen = true
 var isUSCitizen = false
+
 // var elegibilityForDriversLicense = ageIsMoreThanEighteen && isUSCitizen
 var elegibilityForDriversLicense = ageIsMoreThanEighteen || isUSCitizen
 console.log('This customer is eligible for DL: ' + elegibilityForDriversLicense)
