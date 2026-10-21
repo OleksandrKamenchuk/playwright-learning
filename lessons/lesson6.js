@@ -1,6 +1,6 @@
 //Conditional statements
 
-// if(conditio) {
+// if(condition) {
 //     //execute some dode here
 // } else {
 //     //execute some code here
