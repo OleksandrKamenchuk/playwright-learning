@@ -32,7 +32,10 @@ console.log(user)
 // Add "webkit", print the number of browsers and the second element.
 // ============================================================
 
-
+const browsers = ["chromium", "firefox"]
+browsers.push("webkit")
+console.log(browsers.length)
+console.log(browsers[1])
 
 // ============================================================
 // Task 4. Conditions
@@ -43,6 +46,18 @@ console.log(user)
 // ============================================================
 
 
+function getStatusMessage(code) {
+    if (code === 200) {
+        return "OK"
+    } else if (code === 404) {
+        return "Not Found"
+    } else if (code === 500) {
+        return "Server Error"
+    } else {
+        return "Unknown"
+    }
+}
+console.log(getStatusMessage(200), getStatusMessage(404), getStatusMessage(500), getStatusMessage(529));
 
 // ============================================================
 // Task 5. Logical operators
