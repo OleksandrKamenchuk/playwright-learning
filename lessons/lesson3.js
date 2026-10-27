@@ -7,6 +7,7 @@ var customer = {
 }
 //Dot notation
 customer.firstName = "Mike"
+
 // Bracket notation
 customer['lastName'] = "Silver"
 console.log(`${customer.firstName} ${customer.lastName}`)
