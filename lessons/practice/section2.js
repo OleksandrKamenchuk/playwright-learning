@@ -5,12 +5,12 @@
 //   Test "Login test" finished with status: passed
 // ============================================================
 
-const testName = "Login test"
-let testStatus = "passed"
+const testName = "Login test";
+let testStatus = "passed";
 
- console.log(`Test "${testName}" finished with status: ${testStatus}`)
+console.log(`Test "${testName}" finished with status: ${testStatus}`);
 
- // ============================================================
+// ============================================================
 // Task 2. Object
 // Create object `user` with fields: email, password, isAdmin.
 // Print the email. Then flip isAdmin to the opposite value
@@ -18,13 +18,13 @@ let testStatus = "passed"
 // ============================================================
 
 const user = {
-    email: "test0@dog1.example.com",
-    password: "Password123",
-    isAdmin: false
-}
-console.log(user.email)
-user.isAdmin =!user.isAdmin
-console.log(user)
+  email: "test0@dog1.example.com",
+  password: "Password123",
+  isAdmin: false,
+};
+console.log(user.email);
+user.isAdmin = !user.isAdmin;
+console.log(user);
 
 // ============================================================
 // Task 3. Array
@@ -32,10 +32,10 @@ console.log(user)
 // Add "webkit", print the number of browsers and the second element.
 // ============================================================
 
-const browsers = ["chromium", "firefox"]
-browsers.push("webkit")
-console.log(browsers.length)
-console.log(browsers[1])
+const browsers = ["chromium", "firefox"];
+browsers.push("webkit");
+console.log(browsers.length);
+console.log(browsers[1]);
 
 // ============================================================
 // Task 4. Conditions
@@ -45,19 +45,23 @@ console.log(browsers[1])
 // Check it with 4 different values.
 // ============================================================
 
-
 function getStatusMessage(code) {
-    if (code === 200) {
-        return "OK"
-    } else if (code === 404) {
-        return "Not Found"
-    } else if (code === 500) {
-        return "Server Error"
-    } else {
-        return "Unknown"
-    }
+  if (code === 200) {
+    return "OK";
+  } else if (code === 404) {
+    return "Not Found";
+  } else if (code === 500) {
+    return "Server Error";
+  } else {
+    return "Unknown";
+  }
 }
-console.log(getStatusMessage(200), getStatusMessage(404), getStatusMessage(500), getStatusMessage(529));
+console.log(
+  getStatusMessage(200),
+  getStatusMessage(404),
+  getStatusMessage(500),
+  getStatusMessage(529),
+);
 
 // ============================================================
 // Task 5. Logical operators
@@ -66,14 +70,15 @@ console.log(getStatusMessage(200), getStatusMessage(404), getStatusMessage(500),
 // (hint: password.length).
 // ============================================================
 
-function canLogin(email, password) { 
-    return !!email && !!password && password.length >= 8
+function canLogin(email, password) {
+  return !!email && !!password && password.length >= 8;
 }
 
-console.log(canLogin("test@example.com", "Password123")); // має бути true
-console.log(canLogin("", "Password123"));                 // має бути false
-console.log(canLogin("test@example.com", ""));            // має бути false
-console.log(canLogin("test@example.com", "short"));       // має бути false
+console.log(canLogin("test@example.com", "Password123"));
+console.log(canLogin("", "Password123"));
+console.log(canLogin("test@example.com", ""));
+console.log(canLogin("test@example.com", "short"));
+
 // ============================================================
 // Task 6. Loop
 // const results = ["passed", "failed", "passed", "skipped", "failed"]
@@ -81,6 +86,21 @@ console.log(canLogin("test@example.com", "short"));       // має бути fal
 //   Passed: 2, Failed: 2, Skipped: 1
 // ============================================================
 
+const results = ["passed", "failed", "passed", "skipped", "failed"];
+let passed = 0;
+let failed = 0;
+let skipped = 0;
+for (let status of results) {
+  if (status === "passed") {
+    passed++;
+  } else if (status === "failed") {
+    failed++;
+  } else if (status === "skipped") {
+    skipped++;
+  }
+}
+
+console.log(`Passed: ${passed}, Failed: ${failed}, Skipped: ${skipped}`);
 
 
 // ============================================================
@@ -92,8 +112,6 @@ console.log(canLogin("test@example.com", "short"));       // має бути fal
 // ];
 // Write a function that returns names of tests longer than 3 seconds.
 // ============================================================
-
-
 
 // ============================================================
 // Task 8. Class
