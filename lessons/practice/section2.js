@@ -66,8 +66,14 @@ console.log(getStatusMessage(200), getStatusMessage(404), getStatusMessage(500),
 // (hint: password.length).
 // ============================================================
 
+function canLogin(email, password) { 
+    return !!email && !!password && password.length >= 8
+}
 
-
+console.log(canLogin("test@example.com", "Password123")); // має бути true
+console.log(canLogin("", "Password123"));                 // має бути false
+console.log(canLogin("test@example.com", ""));            // має бути false
+console.log(canLogin("test@example.com", "short"));       // має бути false
 // ============================================================
 // Task 6. Loop
 // const results = ["passed", "failed", "passed", "skipped", "failed"]
